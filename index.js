@@ -18,22 +18,6 @@ const cardsEl = [];
 
 const cardsData = getCardsData();
 
-// Store card data
-// const cardsData = [
-//   {
-//     question: 'What must a variable begin with',
-//     answer: 'A letter, $ or _',
-//   },
-//   {
-//     question: 'What is',
-//     answer: 'Container for a piece of data',
-//   },
-//   {
-//     question: 'Example of Case Sensitive Variable',
-//     answer: 'thisIsAVariable',
-//   }
-// ];
-
 //Create all cards
 function createCards() {
   cardsData.forEach((data, index) => createCard(data, index));
@@ -146,6 +130,6 @@ addCardBtn.addEventListener('click', () => {
 
 clearBtn.addEventListener('click', () => {
   localStorage.clear();
-  cards.cardsContainer.innerHTML = '';
+  cardsContainer.innerHTML = '';
   window.location.reload();
 })
